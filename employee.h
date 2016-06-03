@@ -6,19 +6,19 @@
 
 using namespace std;
 
-//typedef unsigned int int;
+typedef unsigned int ui;
 
 class Employee: public Printable
 {
 private:
     string name;
-    int mobilenumber;
+    ui mobilenumber;
     string address;
-    int salary;
-    int year;
+    ui salary;
+    ui year;
     
 public:
-  void setEmployee(string,int,string,int,int);
+  void setEmployee(string,ui,string,ui,ui);
   //void getEmployee();
 
     void print() override;
