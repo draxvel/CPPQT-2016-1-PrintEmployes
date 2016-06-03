@@ -1,29 +1,18 @@
-#include "employee.h"
 #include <iostream>
+#include "employee.h"
+#include "printable.h"
+
 using namespace std;
 
 Employee::Employee()
 {
-    string name;
-    ui mobilenumber;
-    string address;
-    ui salary;
-    ui year;
+//    string name;
+//    ui mobilenumber;
+//    string address;
+//    ui salary;
+//    ui year;
 }
-
-
-
-//            void Employee::setName(string *name1)
-//            {
-//                cout<<"Enter a name: "<<endl;
-//                cin>>name1;
-
-//            }
-
-
-
-
-    void Employee::setEmployee(string name1,ui mobi1,string address1,ui salary1, ui year1)
+    void Employee::setEmployee(string name1,int mobi1,string address1,int salary1, int year1)
     {
         cout<<"Enter a name: "<<endl;
         cin>>name1;
@@ -40,9 +29,12 @@ Employee::Employee()
         cout<<"Enter a years: "<<endl;
         cin>>year;
         year=year1;
+        cout.flush();
+        cin.clear();
+        cout<<"Done";
     }
     
-   void Employee::getEmployee()
+   void Employee::print()
    {
        cout<<name;
         cout<<endl;
@@ -54,15 +46,11 @@ Employee::Employee()
         cout<<endl;
        cout<<year;
         cout<<endl;
+        cout<<"all is print";
    }
 
 
 
 
-//  void Employee::test()
-//{
-//    cout<<"Good"<<endl;
-//}
-    
 
 

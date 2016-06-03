@@ -17,14 +17,17 @@
  *
  * Параметер listToPrint - Список об'єктів про які необхідно вивести інформацію у консоль.
  */
-void printList(const std::vector<Printable *> listToPrint)
-{
-    for (auto item: listToPrint)
-    {
-        item->print();
-        std::cout << std::endl;
-    }
-}
+
+
+//void printList(const std::vector<Printable *> listToPrint)
+//{
+//    for (auto item: listToPrint)
+//    {
+//        item->print();
+//        std::cout << std::endl;
+//    }
+//}
+
 
 int main()
 {
@@ -38,10 +41,11 @@ int main()
     //    * Заробітна плата (число у доларах США)
     //    * З якого року працює
     // Клас має мати окремий *.h-файл з описом та окремий *.cpp файл що міститиме реалізацію.
-    
+
     // 2. Для того, щоб вивести інформацію про працівника, успадкуйте його від класу Printable
     // та перевизначіть метод print(). У цьому методі виведіть усю доступну про працівника
     // інформацію у консоль.
+
     // 3. Створіть 2-3 об'єкта класу Employee, додайте їх до списку employeesToPrint
     // та виведіть з допомогою функції printList().
     //
@@ -66,31 +70,33 @@ int main()
 //      Employee::setName(ptr);
 
     string name;
-    ui mobilenumber;
+    int mobilenumber;
     string address;
-    ui salary;
-    ui year;
+    int salary;
+    int year;
 
     Employee a;
+    a.setEmployee(name,mobilenumber,address,salary,year);
+    cout<<endl;
+    a.print();
 
-     a.setEmployee(name,mobilenumber,address,salary,year);
-     cout<<endl;
-     a.getEmployee();
 
 
-    std::vector<Printable *> employeesToPrint;
 
-    // Створіть об'єкти Employee та наповніть список тут....
 
-    printList(employeesToPrint);
+//    std::vector<Printable *> employeesToPrint;
 
-    std::cout << std::endl; // ------------
+//    // Створіть об'єкти Employee та наповніть список тут....
 
-    std::vector<Printable *> officesToPrint;
+//    printList(employeesToPrint);
 
-    // Створіть об'єкти Office та наповніть список тут....
+//    std::cout << std::endl; // ------------
 
-    printList(officesToPrint);
+//    std::vector<Printable *> officesToPrint;
+
+//    // Створіть об'єкти Office та наповніть список тут....
+
+//    printList(officesToPrint);
 
     return 0;
 }

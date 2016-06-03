@@ -2,40 +2,29 @@
 #define EMPLOYEE_H
 #include <string>
 #include <iostream>
+#include <printable.h>
+
 using namespace std;
 
+//typedef unsigned int int;
 
-typedef unsigned int ui;
-
-class Employee
+class Employee: public Printable
 {
-    
 private:
-    
     string name;
-    ui mobilenumber;
+    int mobilenumber;
     string address;
-    ui salary;
-    ui year;
+    int salary;
+    int year;
     
 public:
-   // void test();
+  void setEmployee(string,int,string,int,int);
+  //void getEmployee();
 
-
-//    void setName(string *);
-
-  void setEmployee(string,ui,string,ui,ui);
-  void getEmployee();
-   
-//   void setMobilenumber (ui);
-
-//   void setAddress(char *);
-   
-//   void setSalary (ui);
-   
-//   void setYear (ui);;
+    void print() override;
    
    Employee();
+
 };
 
 #endif // EMPLOYEE_H
