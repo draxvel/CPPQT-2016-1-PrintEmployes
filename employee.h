@@ -18,10 +18,10 @@ private:
     ui year;
     
 public:
-  void setEmployee(string,ui,string,ui,ui);
-  //void getEmployee();
+  //void setEmployee(string,ui,string,ui,ui);
+  void setEmployee(Employee *p);
 
-    void print() override;
+  void print() override;
    
    Employee();
 

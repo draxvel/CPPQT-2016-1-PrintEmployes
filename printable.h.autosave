@@ -16,6 +16,7 @@ public:
 
     Printable();
     virtual void print(); //const = 0;
+    
 
 };
 

@@ -22,7 +22,7 @@ using namespace std;
 
 
 
-void printList(const std::vector<Employee> listToPrint)
+void printList(const std::vector <Employee> listToPrint)
 {
     for (auto item: listToPrint)
     {
