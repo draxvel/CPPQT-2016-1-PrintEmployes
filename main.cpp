@@ -21,11 +21,11 @@ using namespace std;
  */
 
 
-void printList(std::vector <Printable > listToPrint)
+void printList(const std::vector <Printable * > listToPrint)
 {
     for (auto item: listToPrint)
     {
-        item.print();
+        item->print ();
         std::cout << std::endl;
     }
 }
@@ -67,20 +67,21 @@ int main()
 
 
     // Створіть об'єкти Employee та наповніть список тут....
-      Employee Ivan;
-      Employee *p;
-      p=&Ivan;
-      p->setEmployee(p);
-
-      Employee Max;
-      Employee *q;
-      q=&Max;
-      q->setEmployee(q);
-
-
     vector <Printable *> employeesToPrint;
-    employeesToPrint.push_back(Ivan);
-    employeesToPrint.push_back(Max);
+
+    Employee Ivan;
+    Employee *p;
+    p=&Ivan;
+    p->setEmployee(p);
+
+    Employee Max;
+    Employee *q;
+    q=&Max;
+    q->setEmployee(q);
+
+
+    employeesToPrint.push_back(&Ivan);
+    employeesToPrint.push_back(&Max);
 
     printList(employeesToPrint);
 
@@ -88,6 +89,9 @@ int main()
  cout << std::endl; // ------------
 
  // Створіть об'єкти Office та наповніть список тут....
+
+ vector<Printable *> officesToPrint;
+
     Office Google;
     Office *g;
     g=&Google;
@@ -98,10 +102,8 @@ int main()
     m=&Mailru;
     m->setOffice(m);
 
-
-   vector<Printable *> officesToPrint;
-   officesToPrint.push_back(Google);
-   officesToPrint.push_back(Mailru);
+   officesToPrint.push_back(&Google);
+   officesToPrint.push_back(&Mailru);
 
    printList(officesToPrint);
 

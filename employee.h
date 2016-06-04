@@ -15,10 +15,11 @@ private:
     ui year;
     
 public:
+    Employee();
   void setEmployee(Employee *p);
   void print() override;
    
-   Employee();
+
 };
 
 #endif // EMPLOYEE_H

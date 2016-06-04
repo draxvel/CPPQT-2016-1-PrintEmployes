@@ -16,7 +16,6 @@ void Office::setOffice(Office *p)
         cout<<endl;
     }
 
-
     void Office::print()
    {
         cout<<"Name of office: "<<nameOffise<<endl;

@@ -14,7 +14,7 @@ class Printable
 {
 public:
 
-    Printable();
+    //Printable();
     virtual void print(); //const = 0;
 };
 

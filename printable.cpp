@@ -1,7 +1,7 @@
 #include "employee.h"
 
-Printable::Printable()
-{}
+//Printable::Printable()
+//{ }
 
 void Printable::print()
-{}
+{ }

@@ -5,8 +5,7 @@
 using namespace std;
 
 Employee::Employee()
-{
-}
+{}
 
 void Employee::setEmployee(Employee *p)
     {  
@@ -23,7 +22,6 @@ void Employee::setEmployee(Employee *p)
         cout<<endl;
     }
     
-
     void Employee::print()
    {
        cout<<endl;
