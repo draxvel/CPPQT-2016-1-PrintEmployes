@@ -3,6 +3,7 @@
 
 #include "printable.h"
 #include "employee.h"
+#include "office.h"
 
 using namespace std;
 /*
@@ -20,9 +21,7 @@ using namespace std;
  */
 
 
-
-
-void printList(const std::vector<Employee> listToPrint)
+void printList(std::vector <Printable > listToPrint)
 {
     for (auto item: listToPrint)
     {
@@ -66,34 +65,45 @@ int main()
     // та перевизначіть метод print(). У цьому методі виведіть усю доступну про офіс
     // інформацію у консоль.
 
+
+    // Створіть об'єкти Employee та наповніть список тут....
       Employee Ivan;
       Employee *p;
       p=&Ivan;
       p->setEmployee(p);
 
-       Employee Max;
-       Employee *q;
-       q=&Max;
-       q->setEmployee(q);
+      Employee Max;
+      Employee *q;
+      q=&Max;
+      q->setEmployee(q);
 
 
-    std::vector <Employee> employeesToPrint;
-
-    // Створіть об'єкти Employee та наповніть список тут....
+    vector <Printable *> employeesToPrint;
     employeesToPrint.push_back(Ivan);
     employeesToPrint.push_back(Max);
 
-   //std:: cout<<employeesToPrint[0];
-
     printList(employeesToPrint);
 
-    std::cout << std::endl; // ------------
 
-    //std::vector<Printable *> officesToPrint;
+ cout << std::endl; // ------------
 
-    // Створіть об'єкти Office та наповніть список тут....
+ // Створіть об'єкти Office та наповніть список тут....
+    Office Google;
+    Office *g;
+    g=&Google;
+    g->setOffice(g);
 
-    //printList(officesToPrint);
+    Office Mailru;
+    Office *m;
+    m=&Mailru;
+    m->setOffice(m);
+
+
+   vector<Printable *> officesToPrint;
+   officesToPrint.push_back(Google);
+   officesToPrint.push_back(Mailru);
+
+   printList(officesToPrint);
 
     return 0;
 }

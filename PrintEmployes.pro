@@ -5,8 +5,10 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     employee.cpp \
-    printable.cpp
+    printable.cpp \
+    office.cpp
 
 HEADERS += \
     printable.h \
-    employee.h
+    employee.h \
+    office.h
